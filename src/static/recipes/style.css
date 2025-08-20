@@ -1,0 +1,23 @@
+.main-header {
+  text-align: center;
+  margin-top: 3px;
+}
+
+.recipe-images {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.recipe-images img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer
+}
+
+.recipes-link {
+  display: block;
+  text-align: center;
+  margin-top: 3px;
+}

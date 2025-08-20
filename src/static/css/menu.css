@@ -1,0 +1,34 @@
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #E7E7E7;
+  padding: 12px 24px;
+}
+
+.menu-logo {
+  flex: 0 0 auto;
+}
+
+.menu-logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.menu-links {
+  gap: 20px;
+}
+
+.menu-links a {
+  flex: 0 0 auto;
+  text-decoration: none;
+  color: #2196F3;
+  font-weight: 500;
+  transition: color 0.2s;
+  padding: 0 10px;
+}
+
+.menu-links a:hover {
+  color: #00BFFF;
+}
