@@ -1,2 +1,3 @@
 *.bak
 *.sqlite3
+src/recipe_project/settings.py

@@ -28,3 +28,6 @@ def logout_view(request):
 
 def success(request):
   return render(request, 'auth/success.html' )
+
+def me(request):
+  return render(request, 'me.html')

@@ -1,6 +1,11 @@
 {% load static %}
 {% include "menu.html" %}
 <h1>Recipes List!</h1>
+<br>
+<form action="" method="GET">
+  {{ form }}
+  <button type="submit">search</button>
+</form>
 
 <table border="1" cellpadding="5" cellspacing="5">
   <tr>
@@ -12,5 +17,16 @@
     <td><a href="{{object.get_absolute_url}}">{{object.name}}</a></td>
     <td><img src="{{object.image.url}}" width="150" height="200" /></td>
   </tr>
+  {% empty %}
+  <tr>
+    <td>No recipes found</td>
+    <td>No recipes found</td>
+  </tr>
   {% endfor %}
 </table>
+
+{% if show_dataframe %}
+<h2>Results in dataframe style</h2>
+{{ dataframe_html|safe }}
+<a href="{% url 'recipes:list' %}"><button type="button">Clear Search</button></a>
+{% endif %}

@@ -18,15 +18,16 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import login_view, logout_view, success
+from .views import login_view, logout_view, success, me
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls', namespace='recipes')),
     path('profile/', include('profiles.urls', namespace='profiles')),
-    path('login/', login_view, name='login'),
+    path('accounts/login/', login_view, name='login'),
     path('logout/', logout_view, name='logout'),
-    path('success/', success, name='success') 
+    path('success/', success, name='success'),
+    path('me/', me, name='me'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

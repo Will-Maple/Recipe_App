@@ -1,0 +1,16 @@
+{% load static %}
+{% include "menu.html" %}
+<h1>Data Visualization</h1>
+<p>Why is this here you may ask? What kind of recipe app has charts and graphs, you may ask? Well, this one does purely
+  to show you I can do data visualization in Django.</p>
+
+<h2>Pie</h2>
+<img src="data:image/png;base64,{{ chart_pie }}" />
+
+<h2>Bar</h2>
+<img src="data:image/png;base64,{{ chart_bar }}" />
+
+<h2>Line</h2>
+<img src="data:image/png;base64,{{ chart_line }}" />
+
+<h2>Three different kinds of chart wow!</h2>

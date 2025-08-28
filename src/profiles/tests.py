@@ -15,7 +15,10 @@ class ProfileModelTest(TestCase):
     self.assertEqual(field_label, 'user')
 
 class ProfilePageLinkTest(TestCase):
+
   def test_recipes_link_in_profile(self):
+    User.objects.create_user(username='testy', password='mctestyface')
+    self.client.login(username='testy', password='mctestyface')
     response = self.client.get(reverse('profiles:profile'))                 
     self.assertContains(
       response,
