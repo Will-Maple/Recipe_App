@@ -1,1 +1,1 @@
-web: gunicorn src.recipe_project.wsgi:application
+web: gunicorn recipe_project.wsgi:application --chdir src
